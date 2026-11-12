@@ -10,9 +10,9 @@
 </head>
 
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" style="background-color: #36aebb;"> 
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Thiago Mendes.dev</a>
+            <a class="navbar-brand fw-bold" href="#">Desenvolvedor Thiago</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="imagens/slide1.png" class="d-block w-100" alt="Slide 1">
+                <img src="imagens/slide1.jpg" class="d-block w-100" alt="Slide 1">
             </div>
 
             <div class="carousel-item">
@@ -68,8 +68,8 @@
         <div class="container py-4">
             <div class="row align-items-center g-5">
                 <div class="col-lg-4 text-center">
-                    <img src="imagens/perfil.jpg" alt="Foto de perfil"
-                        class="profile-img rounded-circle border border-4 border-white shadow img-fluid mb-3">
+                    <img src="imagens/perfil_photo.jpg" alt="Foto de perfil"
+                        class="rounded-circle border border-4 border-white shadow img-fluid mb-3">
 
                     <h4 class="fw-bold mt-3 mb-1">Thiago Mendes</h4>
                     <p class="text-muted mb-2">Desenvolvimento de Sistemas</p>
@@ -206,43 +206,53 @@
         <div class="row g-4">
             <div class="col-md-6 col-xl-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4">
-                    <img src="imagens/p1.png" class="card-img-top project-img" alt="Portfólio Pessoal">
+                    <img src="imagens/p1.png" class="card-img-top" alt="Sistema em Python">
                     <div class="card-body d-flex flex-column">
                          <h5 class="card-title">Portfólio Pessoal</h5>
                         <p class="card-text text-muted flex-grow-1">
-                             Site desenvolvido para apresentar perfil profissional, tecnologias estudadas e projetos
-                            realizados.
+                            Site responsivo desenvolvido com HTML, CSS e Bootstrap para apresentar meu perfil profissional, 
+                            conhecimentos e projetos, utilizando animações e efeitos visuais para melhorar a experiência do usuário.
                         </p>
-                         <a href="#" class="btn btn-outline-primary mt-auto">Ver projeto</a>
-                        
+                        <a href="https://github.com/MBDSThiago/monitoramento-reservatorio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline-primary w-100 mt-3">
+                            Ver projeto</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-xl-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4">
-                    <img src="imagens/p2.jpg" class="card-img-top project-img" alt="Sistema em Python">
+                    <img src="imagens/p2.png" class="card-img-top" alt="Sistema em Python">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Sistema em Python</h5>
+                        <h5 class="card-title">Monitoramento</h5>
                         <p class="card-text text-muted flex-grow-1">
-                            Aplicação desenvolvida em Python com foco em lógica de programação, entrada de dados e
-                            processamento de informações.
+                            Sistema desenvolvido em Python para simular o monitoramento dos níveis de água de um reservatório, 
+                            utilizando estruturas condicionais para classificar os níveis e exibir alertas.
                         </p>
-                        <a href="#" class="btn btn-outline-primary mt-auto">Ver projeto</a>
+                        <a href="https://github.com/MBDSThiago/monitoramento-reservatorio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline-primary w-100 mt-3">
+                            Ver projeto</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-xl-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4">
-                    <img src="imagens/p3.jpg" class="card-img-top project-img" alt="Landing Page Responsiva">
+                    <img src="imagens/p3.png" class="card-img-top" alt="Landing Page Responsiva">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Landing Page Responsiva</h5>
+                        <h5 class="card-title">Pesquisa de Satisfação</h5>
                         <p class="card-text text-muted flex-grow-1">
-                            Página criada com HTML, CSS e Bootstrap, priorizando organização visual, responsividade
-                            e experiência do usuário.
+                            Programa desenvolvido em Python para realizar pesquisas de satisfação com clientes, 
+                            utilizando estruturas de repetição e condicionais para coletar respostas e apresentar os resultados.
                         </p>
-                        <a href="#" class="btn btn-outline-primary mt-auto">Ver projeto</a>
+                        <a href="https://github.com/MBDSThiago/avaliacao-clientes"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline-primary w-100 mt-3">Ver projeto</a>
                     </div>
                 </div>
             </div>
@@ -266,9 +276,9 @@
                     </p>
                     
                     <div class="d-grid gap-3">
-                        <a href="mailto:joao@email.com" class="btn btn-outline-primary btn-lg">Enviar e-mail</a>
-                        <a href="https://github.com/" target="_blank" class="btn btn-dark btn-lg">GitHub</a>
-                        <a href="https://linkedin.com/" target="_blank" class="btn btn-primary btn-lg">LinkedIn</a>
+                        <a href="mailto:Thiago.Mendesds@hotmail.com" class="btn btn-outline-primary btn-lg">Enviar e-mail</a>
+                        <a href="https://github.com/MBDSThiago" target="_blank" class="btn btn-dark btn-lg">GitHub</a>
+                        
                     </div>
                     
                     <hr class="my-4">
@@ -291,6 +301,53 @@
         height: 100%;
         object-fit: cover;
     }
+
+    .navbar .navbar-brand,
+    .navbar .navbar {
+        color: #123B5D;
+    }
+
+.navbar .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #075985;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 40, 80, 0.15) !important;
+}
+
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#projetos .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
 </style>
 
 <footer class="bg-dark text-light py-4">
