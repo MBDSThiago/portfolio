@@ -10,6 +10,7 @@
 </head>
 
 <body class="bg-light">
+    <!-- O fundo ciano do menu é definido diretamente no atributo style. -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" style="background-color: #36aebb;"> 
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Desenvolvedor Thiago</a>
@@ -34,6 +35,7 @@
         </div>
     </nav>
 
+    <!-- O carrossel alterna os três slides automaticamente. A classe carousel-fade suaviza a troca de imagens. -->
     <div id="carouselPortfolio" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0" class="active"></button>
@@ -67,7 +69,7 @@
     <section id="perfil" class="bg-white min-vh-100 d-flex align-items-center py-5">
         <div class="container py-4">
             <div class="row align-items-center g-5">
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center">=
                     <img src="imagens/perfil_photo.jpg" alt="Foto de perfil"
                         class="rounded-circle border border-4 border-white shadow img-fluid mb-3">
 
@@ -203,17 +205,22 @@
                 </p>
             </div>
             
+        <!-- A grade exibe um cartão por linha em telas pequenas, dois em telas médias e três em telas extra grandes. -->
         <div class="row g-4">
+            <!-- Projeto 1 — Portfólio Pessoal. O cartão apresenta o próprio site e aponta para seu código no GitHub. -->
             <div class="col-md-6 col-xl-4">
+                <!-- Nos três cartões, h-100 padroniza a altura por linha. O corpo em coluna e o flex-grow-1 ajudam a alinhar os botões. -->
                 <div class="card h-100 shadow-sm border-0 rounded-4">
-                    <img src="imagens/p1.png" class="card-img-top" alt="Sistema em Python">
+                    <img src="imagens/p1.png" class="card-img-top" 
+                    alt="Página inicial do meu portfólio pessoal">
                     <div class="card-body d-flex flex-column">
                          <h5 class="card-title">Portfólio Pessoal</h5>
                         <p class="card-text text-muted flex-grow-1">
                             Site responsivo desenvolvido com HTML, CSS e Bootstrap para apresentar meu perfil profissional, 
                             conhecimentos e projetos, utilizando animações e efeitos visuais para melhorar a experiência do usuário.
                         </p>
-                        <a href="https://github.com/MBDSThiago/monitoramento-reservatorio"
+                        <!-- Nos três botões, target="_blank" abre o GitHub em uma nova aba e rel protege a página de origem. -->
+                        <a href="https://github.com/MBDSThiago/portfolio"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="btn btn-outline-primary w-100 mt-3">
@@ -222,9 +229,11 @@
                 </div>
             </div>
 
+            <!-- Projeto 2 — Monitoramento. O programa em Python simula níveis de água e exibe alertas. -->
             <div class="col-md-6 col-xl-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4">
-                    <img src="imagens/p2.png" class="card-img-top" alt="Sistema em Python">
+                    <img src="imagens/p2.png" class="card-img-top" 
+                    alt="Terminal com alertas sobre os níveis de água do reservatório">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Monitoramento</h5>
                         <p class="card-text text-muted flex-grow-1">
@@ -240,9 +249,11 @@
                 </div>
             </div>
 
+            <!-- Projeto 3 — Pesquisa de Satisfação. O programa em Python coleta respostas e apresenta os resultados. -->
             <div class="col-md-6 col-xl-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4">
-                    <img src="imagens/p3.png" class="card-img-top" alt="Landing Page Responsiva">
+                    <img src="imagens/p3.png" class="card-img-top" 
+                    alt="Pesquisa de satisfação no terminal">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Pesquisa de Satisfação</h5>
                         <p class="card-text text-muted flex-grow-1">
@@ -275,6 +286,7 @@
                         construir novas conexões profissionais.
                     </p>
                     
+                    <!-- O link mailto abre o aplicativo de e-mail. O outro botão leva ao perfil do GitHub. -->
                     <div class="d-grid gap-3">
                         <a href="mailto:Thiago.Mendesds@hotmail.com" class="btn btn-outline-primary btn-lg">Enviar e-mail</a>
                         <a href="https://github.com/MBDSThiago" target="_blank" class="btn btn-dark btn-lg">GitHub</a>
@@ -302,16 +314,33 @@
         object-fit: cover;
     }
 
+    /* Sobrepõe um degradê aos slides: azul-escuro na base e ciano quase transparente no topo. */
+    #carouselPortfolio .carousel-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(0, 40, 80, 0.65),
+            rgba(72, 201, 216, 0.08)
+        );
+        /* A camada não captura cliques nem interfere nos controles do carrossel. */
+        pointer-events: none;
+    }
+
+    /* Aplica azul-escuro ao nome e aos links do menu superior. */
     .navbar .navbar-brand,
-    .navbar .navbar {
+    .navbar .nav-link {
         color: #123B5D;
     }
 
+/* Usa cada link como referência de posição para a linha animada e suaviza mudanças na cor do texto. */
 .navbar .nav-link {
     position: relative;
     transition: color 0.3s ease;
 }
 
+/* O pseudoelemento ::after cria uma linha abaixo do link, com largura inicial zero. */
 .navbar .nav-link::after {
     content: "";
     position: absolute;
@@ -323,25 +352,23 @@
     transition: width 0.3s ease;
 }
 
+/* Ao passar o mouse, a linha cresce até ocupar toda a largura do link. */
 .navbar .nav-link:hover::after {
     width: 100%;
 }
 
+/* Suaviza o movimento e a mudança de sombra em todos os cartões que usam a classe .card. */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Ao passar o mouse, o cartão sobe 5 px e ganha uma sombra mais forte. */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 40, 80, 0.15) !important;
 }
 
-.project-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
+/* Mantém as imagens dos projetos com 220 px de altura. O modo cover preenche a área sem distorcer, podendo recortar as bordas. */
 #projetos .card-img-top {
     width: 100%;
     height: 220px;
