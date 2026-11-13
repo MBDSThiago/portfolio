@@ -12,7 +12,7 @@ O site possui um design responsivo, organizado em seções, com o objetivo de fa
 - **Devicon:** ícones das tecnologias e ferramentas.
 
 ## 🌐 Link do site publicado
-🔗 **Acesse o portfólio:** [Adicionar link do site aqui]
+🔗 **Acesse o portfólio:** https://mbdsthiago.github.io/portfolio/#projetos
 
 ## ⚙️ Funcionamento do projeto
 O portfólio é dividido nas seguintes partes:
